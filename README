@@ -1,0 +1,10 @@
+
+INSERT CHILD 3 UNDER NODE 2 as a folder
+```
+insert into path (ancestor, descendant, depth) select ancestor, 3, depth+1 from path where descendant =2 union all select 3,3,0;
+```
+
+INSERT CHILD 3 UNDER NODE 2 as a file
+```
+insert into path (ancestor, descendant, depth) select ancestor, 3, depth+1 from path where descendant =2 
+```
